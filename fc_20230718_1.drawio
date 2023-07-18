@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" modified="2023-07-18T15:07:42.291Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="5Z6oNPaLX5gjsZ_005EA" version="21.2.1" type="github">
+  <diagram id="GvhSlwiOiUPLBmW3Ypth" name="Page-1">
+    <mxGraphModel dx="2393" dy="1257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;member_auth&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type  /* &#39;角色类型&#39; */: tinyint(1)&lt;br&gt;member_id  /* &#39;账号id&#39; */: varchar(48)&lt;br&gt; auth_codes  /* &#39;权限id列表&#39; */: varchar(1024)&lt;br&gt;auth_info  /* &#39;权限详情&#39; */: text&lt;br&gt;create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;业务主键id&#39; */: varchar(40)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="410" y="260" width="419" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;account_id  /* &#39;账号id&#39; */: varchar(40)&lt;br&gt; account  /* &#39;登陆用户名&#39; */: varchar(64)&lt;br&gt; iam_user_id  /* &#39;casdoor侧userId&#39; */: varchar(40)&lt;br&gt; type  /* &#39;账号类型 1:普通,2:组织管理员,3:超级管理员&#39; */: tinyint(1)&lt;br&gt; status  /* &#39;账号状态 1:启用,2:停用&#39; */: tinyint(1)&lt;br&gt; name  /* &#39;姓名&#39; */: varchar(40)&lt;br&gt; phone  /* &#39;手机号&#39; */: varchar(40)&lt;br&gt; email  /* &#39;邮箱&#39; */: varchar(256)&lt;br&gt; id_card  /* &#39;身份证号&#39; */: varchar(64)&lt;br&gt; password  /* &#39;密码&#39; */: varchar(64)&lt;br&gt; ext_info  /* &#39;拓展信息&#39; */: text&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-410" y="-180" width="371" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;member&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;member_id  /* &#39;组织成员id&#39; */: varchar(40)&lt;br&gt;account_id  /* &#39;账户id&#39; */: varchar(40)&lt;br&gt;organ_id  /* &#39;组织id&#39; */: varchar(40)&lt;br&gt; status  /* &#39;成员状态&#39; */: tinyint(1)&lt;br&gt; audit_step  /* &#39;审核状态&#39; */: tinyint(1)&lt;br&gt; audit_at  /* &#39;审核时间&#39; */: bigint&lt;br&gt; audit_by  /* &#39;审核人&#39; */: varchar(40)&lt;br&gt; ext_info  /* &#39;拓展信息&#39; */: text&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;br&gt; last_login_time  /* &#39;最后登录时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-180" width="310" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;organization&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;organ_id  /* &#39;组织id&#39; */: varchar(40)&lt;br&gt; type  /* &#39;组织类型&#39; */: tinyint(1)&lt;br&gt; name  /* &#39;组织名称&#39; */: varchar(40)&lt;br&gt; admin_name  /* &#39;管理员姓名&#39; */: varchar(40)&lt;br&gt; admin_identity  /* &#39;管理员身份证&#39; */: varchar(64)&lt;br&gt; admin_accounte  /* &#39;管理员手机号&#39; */: varchar(64)&lt;br&gt; ext_info  /* &#39;拓展信息&#39; */: text&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;br&gt; delete_time  /* &#39;删除时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="-180" width="319" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;role&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type  /* &amp;#39;角色类型&amp;#39; */: tinyint(1)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; creator_id  /* &amp;#39;创建者id&amp;#39; */: varchar(48)&lt;br/&gt; role_name  /* &amp;#39;角色名称&amp;#39; */: varchar(48)&lt;br/&gt; auth_info  /* &amp;#39;权限详情&amp;#39; */: text&lt;br/&gt; exp_data  /* &amp;#39;扩展信息&amp;#39; */: text&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;业务主键id&amp;#39; */: varchar(40)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-380" y="250" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;role_member&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; role_id  /* &amp;#39;角色id&amp;#39; */: varchar(40)&lt;br/&gt; member_id  /* &amp;#39;成员id&amp;#39; */: varchar(40)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="260" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="K4EiIYmwcd2j0YAzrUjy-1" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=default;shadow=0;fixDash=0;bendable=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="-137" as="sourcePoint" />
+            <mxPoint x="90" y="-200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K4EiIYmwcd2j0YAzrUjy-2" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=default;shadow=0;fixDash=0;bendable=1;entryX=-0.009;entryY=0.181;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.007;exitY=0.126;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="node5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="-90" as="sourcePoint" />
+            <mxPoint x="483" y="-88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K4EiIYmwcd2j0YAzrUjy-3" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=default;shadow=0;fixDash=0;bendable=1;entryX=-0.013;entryY=0.16;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="node2" target="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="240" as="sourcePoint" />
+            <mxPoint x="127" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="30" y="331" />
+              <mxPoint x="30" y="-133" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K4EiIYmwcd2j0YAzrUjy-6" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.135;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.01;exitY=0.293;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="node6" target="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="220" as="sourcePoint" />
+            <mxPoint x="430" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="K4EiIYmwcd2j0YAzrUjy-7" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.014;exitY=0.918;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node4" target="node2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-100" y="330" as="sourcePoint" />
+            <mxPoint x="90" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
