@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net" modified="2023-08-01T01:43:33.228Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="CxdWED2aigzUmrfJJS-p" version="21.6.2" type="github">
+  <diagram id="7y17XjJKCEPxcaZBy2Ww" name="Page-1">
+    <mxGraphModel dx="2510" dy="1757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;dev_account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; dev_account_id  /* &amp;#39;账号id&amp;#39; */: varchar(40)&lt;br/&gt; casdoor_user_id  /* &amp;#39;casdoor侧userId&amp;#39; */: varchar(40)&lt;br/&gt; ldap_user_dn  /* &amp;#39;ldap用户dn&amp;#39; */: varchar(1000)&lt;br/&gt; status  /* &amp;#39;账号状态 1:启用,2:停用&amp;#39; */: tinyint(1)&lt;br/&gt; name  /* &amp;#39;姓名&amp;#39; */: varchar(40)&lt;br/&gt; email  /* &amp;#39;邮箱&amp;#39; */: varchar(256)&lt;br/&gt; email_verified  /* &amp;#39;邮箱是否验证&amp;#39; */: tinyint(1)&lt;br/&gt; account  /* &amp;#39;账户名&amp;#39; */: varchar(64)&lt;br/&gt; password  /* &amp;#39;密码&amp;#39; */: varchar(256)&lt;br/&gt; phone  /* &amp;#39;手机&amp;#39; */: varchar(64)&lt;br/&gt; area_code  /* &amp;#39;区号&amp;#39; */: varchar(64)&lt;br/&gt; identity  /* &amp;#39;身份证&amp;#39; */: varchar(64)&lt;br/&gt; hide_app_guide  /* &amp;#39;是否隐藏小程序操作指引&amp;#39; */: bigint&lt;br/&gt; ext_info  /* &amp;#39;注册者个人扩展信息&amp;#39; */: varchar(1024)&lt;br/&gt; msg_manage  /* &amp;#39;消息通知管理&amp;#39; */: varchar(1024)&lt;br/&gt; msg_process  /* &amp;#39;前端消息记录&amp;#39; */: tinyint(1)&lt;br/&gt; notify_process  /* &amp;#39;通知中心消息记录&amp;#39; */: tinyint(1)&lt;br/&gt; freeze_msg  /* &amp;#39;冻结消息&amp;#39; */: tinyint(1)&lt;br/&gt; delay_msg  /* &amp;#39;延期消息&amp;#39; */: tinyint(1)&lt;br/&gt; trial_reminder  /* &amp;#39;试用消息&amp;#39; */: tinyint(1)&lt;br/&gt; delay_time  /* &amp;#39;延期时间&amp;#39; */: bigint&lt;br/&gt; update_password_time  /* &amp;#39;密码更新时间&amp;#39; */: bigint&lt;br/&gt; from  /* &amp;#39;注册来源  app、fide、web&amp;#39; */: varchar(64)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-730" y="-430" width="340" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="node11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;dev_organ&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; dev_organ_id  /* &amp;#39;组织id&amp;#39; */: varchar(40)&lt;br/&gt; type  /* &amp;#39;组织类型&amp;#39; */: tinyint(1)&lt;br/&gt; name  /* &amp;#39;组织名称&amp;#39; */: varchar(40)&lt;br/&gt; social_credit_code  /* &amp;#39;社会信用代码&amp;#39; */: varchar(64)&lt;br/&gt; license_netdisk_id  /* &amp;#39;企业营业执照网盘id&amp;#39; */: varchar(128)&lt;br/&gt; authorization_netdisk_id  /* &amp;#39;授权书网盘id&amp;#39; */: varchar(128)&lt;br/&gt; admin_name: longtext&lt;br/&gt; admin_identity: longtext&lt;br/&gt; review_status  /* &amp;#39;审核状态&amp;#39; */: tinyint(1)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;br/&gt; third_review_result  /* &amp;#39;第三方审核结果&amp;#39; */: tinyint(1)&lt;br/&gt; third_refuse_reason  /* &amp;#39;第三方驳回原因&amp;#39; */: varchar(512)&lt;br/&gt; apply_pass_time  /* &amp;#39;申请通过时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="-440" width="380" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;dev_organ_limit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; dev_organ_id  /* &amp;#39;机构id&amp;#39; */: varchar(40)&lt;br/&gt; mini_app_limit  /* &amp;#39;小程序限制数量&amp;#39; */: bigint&lt;br/&gt; host_app_limit  /* &amp;#39;宿主应用限制数量&amp;#39; */: bigint&lt;br/&gt; member_limit  /* &amp;#39;组织成员限制数量&amp;#39; */: bigint&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="-440" width="290" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;member&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; member_id  /* &amp;#39;组织成员id&amp;#39; */: varchar(40)&lt;br/&gt; account_id  /* &amp;#39;账户id&amp;#39; */: varchar(40)&lt;br/&gt; organ_id  /* &amp;#39;组织id&amp;#39; */: varchar(40)&lt;br/&gt; is_admin  /* &amp;#39;是否是管理员 0:否 1:是&amp;#39; */: tinyint(1)&lt;br/&gt; status  /* &amp;#39;成员状态&amp;#39; */: tinyint(1)&lt;br/&gt; last_login_time  /* &amp;#39;最后登录时间&amp;#39; */: bigint&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-157" y="110" width="297" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;member_permission&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; member_id  /* &amp;#39;成员id&amp;#39; */: varchar(48)&lt;br/&gt; permission_codes  /* &amp;#39;权限id列表&amp;#39; */: varchar(1024)&lt;br/&gt; permission_tree  /* &amp;#39;权限树详情&amp;#39; */: text&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;业务主键id&amp;#39; */: varchar(40)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-160" y="1050" width="330" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;oper_account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; oper_account_id  /* &#39;唯一键&#39; */: varchar(40)&lt;br&gt; casdoor_user_id  /* &#39;casdoor用户id&#39; */: varchar(40)&lt;br&gt; name  /* &#39;姓名&#39; */: varchar(40)&lt;br&gt; account  /* &#39;账户名&#39; */: varchar(64)&lt;br&gt; phone  /* &#39;手机&#39; */: varchar(64)&lt;br&gt; email  /* &#39;邮箱&#39; */: varchar(256)&lt;br&gt; status  /* &#39;状态&#39; */: tinyint(1)&lt;br&gt; password  /* &#39;密码&#39; */: varchar(64)&lt;br&gt; update_password_time  /* &#39;密码更新时间&#39; */: bigint&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-718" y="430" width="328" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="node7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;oper_organ&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; oper_organ_id  /* &amp;#39;组织id&amp;#39; */: varchar(40)&lt;br/&gt; name  /* &amp;#39;组织名称&amp;#39; */: varchar(40)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="380" y="440" width="270" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="node9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;oper_review_info&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; oper_review_info_id  /* &amp;#39;唯一键&amp;#39; */: varchar(40)&lt;br/&gt; dev_organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(40)&lt;br/&gt; dev_organ_name  /* &amp;#39;企业名称&amp;#39; */: varchar(64)&lt;br/&gt; dev_organ_account  /* &amp;#39;账户名&amp;#39; */: varchar(64)&lt;br/&gt; apply_time  /* &amp;#39;申请时间&amp;#39; */: bigint&lt;br/&gt; status  /* &amp;#39;状态&amp;#39; */: tinyint(1)&lt;br/&gt; reviewer  /* &amp;#39;审核者&amp;#39; */: varchar(64)&lt;br/&gt; result  /* &amp;#39;审核结果&amp;#39; */: tinyint(1)&lt;br/&gt; refuse_reason  /* &amp;#39;驳回原因&amp;#39; */: varchar(512)&lt;br/&gt; social_credit_code  /* &amp;#39;社会信用代码&amp;#39; */: varchar(64)&lt;br/&gt; license_netdisk_id  /* &amp;#39;企业营业执照网盘id&amp;#39; */: varchar(128)&lt;br/&gt; authorization_netdisk_id  /* &amp;#39;授权书网盘id&amp;#39; */: varchar(128)&lt;br/&gt; admin_info  /* &amp;#39;管理员信息&amp;#39; */: varchar(128)&lt;br/&gt; juridical_person_name  /* &amp;#39;法人姓名&amp;#39; */: varchar(64)&lt;br/&gt; juridical_person_id_card  /* &amp;#39;法人身份证号&amp;#39; */: varchar(64)&lt;br/&gt; third_review_result  /* &amp;#39;第三方审核结果&amp;#39; */: tinyint(1)&lt;br/&gt; third_refuse_reason  /* &amp;#39;第三方驳回原因&amp;#39; */: varchar(512)&lt;br/&gt; request_id  /* &amp;#39;请求id&amp;#39; */: varchar(128)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="-30" width="380" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;resource_group&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; resource_group_id  /* &amp;#39;资源组id&amp;#39; */: varchar(40)&lt;br/&gt; name  /* &amp;#39;资源组名称&amp;#39; */: varchar(40)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="611" y="669" width="309" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;resource_group_relation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; resource_group_id  /* &amp;#39;资源组id&amp;#39; */: varchar(40)&lt;br/&gt; relation_type  /* &amp;#39;关联类型 1: account 2. mini-app 3. host-app&amp;#39; */: tinyint(1)&lt;br/&gt; relation_id  /* &amp;#39;关联id&amp;#39; */: varchar(40)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="861" width="430" height="189" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;role&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type  /* &#39;角色类型&#39; */: tinyint(1)&lt;br&gt; organ_id  /* &#39;企业id&#39; */: varchar(48)&lt;br&gt; role_name  /* &#39;角色名称&#39; */: varchar(48)&lt;br&gt;permission_tree /* &#39;权限树详情&#39; */: text&lt;br&gt; creator_id  /* &#39;创建者id&#39; */: varchar(48)&lt;br&gt; exp_data  /* &#39;扩展信息&#39; */: text&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;业务主键id&#39; */: varchar(40)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="680" width="255" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;role_member&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; role_id  /* &amp;#39;角色id&amp;#39; */: varchar(40)&lt;br/&gt; member_id  /* &amp;#39;成员id&amp;#39; */: varchar(40)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-108" y="460" width="248" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-1" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.009;exitY=0.07;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-240" y="-170" as="sourcePoint" />
+            <mxPoint x="-160" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-290" y="-385" />
+              <mxPoint x="-290" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-2" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.013;exitY=0.13;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.004;entryY=0.299;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node8" target="node5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-320" y="439.5" as="sourcePoint" />
+            <mxPoint x="-270" y="389.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-290" y="473" />
+              <mxPoint x="-290" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-3" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.008;exitY=0.359;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.015;entryY=0.12;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node5" target="node11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="160" as="sourcePoint" />
+            <mxPoint x="310" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="200" />
+              <mxPoint x="230" y="-392" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="node7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="200" as="sourcePoint" />
+            <mxPoint x="330" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="201" />
+              <mxPoint x="230" y="490" />
+              <mxPoint x="380" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-5" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.008;exitY=0.172;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="660" as="sourcePoint" />
+            <mxPoint x="140" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="153" />
+              <mxPoint x="180" y="530" />
+              <mxPoint x="142" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-6" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.01;exitY=0.915;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="node10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="700" as="sourcePoint" />
+            <mxPoint x="140" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="918" />
+              <mxPoint x="190" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-7" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="660" as="sourcePoint" />
+            <mxPoint x="340" y="-390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="270" y="745" />
+              <mxPoint x="270" y="-390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-8" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="740" as="sourcePoint" />
+            <mxPoint x="380" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="750" />
+              <mxPoint x="340" y="750" />
+              <mxPoint x="340" y="500" />
+              <mxPoint x="380" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="node0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-170" y="1090" as="sourcePoint" />
+            <mxPoint x="-160" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-160" y="1100" />
+              <mxPoint x="-329" y="1100" />
+              <mxPoint x="-329" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=1.002;exitY=0.124;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="node11" target="node2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="150" as="sourcePoint" />
+            <mxPoint x="640" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="-390" />
+              <mxPoint x="760" y="-387" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-13" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=-0.007;entryY=0.128;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="node9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="-390" as="sourcePoint" />
+            <mxPoint x="570" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="-380" />
+              <mxPoint x="750" y="-380" />
+              <mxPoint x="750" y="37" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h87Xae9ESmaiQy0YxtZr-14" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="node6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="830" as="sourcePoint" />
+            <mxPoint x="610" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="908" />
+              <mxPoint x="530" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
