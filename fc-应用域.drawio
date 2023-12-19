@@ -1,0 +1,292 @@
+<mxfile host="app.diagrams.net" modified="2023-12-19T11:08:16.114Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Su6UrCdhSzrEfSQpKPwb" version="21.6.6" type="github">
+  <diagram id="fz_2hJpIxkDmsW6JCLgs" name="Page-1">
+    <mxGraphModel dx="3187" dy="2491" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node70" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;api_manage&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; api_manage_id  /* &amp;#39;id&amp;#39; */: varchar(64)&lt;br/&gt; host_app_id  /* &amp;#39;应用id&amp;#39; */: varchar(64)&lt;br/&gt; api_name  /* &amp;#39;api名称&amp;#39; */: varchar(64)&lt;br/&gt; api_category  /* &amp;#39;api分类&amp;#39; */: varchar(512)&lt;br/&gt; api_scope  /* &amp;#39;api范围  1--公有  2--私有&amp;#39; */: tinyint&lt;br/&gt; api_description  /* &amp;#39;api描述&amp;#39; */: varchar(1024)&lt;br/&gt; state  /* &amp;#39;可用范围  1--已禁用  2--已启用&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1138" y="-181" width="305" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="node68" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;api_manage_apply_pass_record&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_id  /* &amp;#39;应用 id&amp;#39; */: varchar(64)&lt;br/&gt; api_manage_id  /* &amp;#39;api id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序 id&amp;#39; */: varchar(64)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1880" y="-50" width="289" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="node57" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;api_manage_apply_record&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; api_manage_apply_record_id  /* &amp;#39;id&amp;#39; */: varchar(64)&lt;br/&gt; host_app_id  /* &amp;#39;应用 id&amp;#39; */: varchar(64)&lt;br/&gt; api_manage_id  /* &amp;#39;api id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序 id&amp;#39; */: varchar(64)&lt;br/&gt; apply_desc  /* &amp;#39;申请说明&amp;#39; */: varchar(2048)&lt;br/&gt; reject_desc  /* &amp;#39;驳回说明&amp;#39; */: varchar(2048)&lt;br/&gt; apply_state  /* &amp;#39;申请状态  1--已申请  2--已通过  3--已驳回&amp;#39; */: tinyint&lt;br/&gt; apply_user_id  /* &amp;#39;申请者id&amp;#39; */: varchar(64)&lt;br/&gt; audit_user_id  /* &amp;#39;审核者id&amp;#39; */: varchar(64)&lt;br/&gt; workflow_instance_id  /* &amp;#39;流程实例id&amp;#39; */: varchar(48)&lt;br/&gt; expired  /* &amp;#39;申请记录是否过期 1-未过期 2-已过期&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1870" y="-610" width="399" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;custom_menu&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; custom_menu_id  /* &amp;#39;唯一id&amp;#39; */: varchar(64)&lt;br/&gt; host_app_id  /* &amp;#39;应用id&amp;#39; */: varchar(64)&lt;br/&gt; sdk_menu_id  /* &amp;#39;仅内置菜单存在，sdk菜单id&amp;#39; */: varchar(64)&lt;br/&gt; name  /* &amp;#39;菜单名称&amp;#39; */: varchar(64)&lt;br/&gt; scope  /* &amp;#39;范围  1--公有  2--私有&amp;#39; */: tinyint&lt;br/&gt; info_id  /* &amp;#39;菜单id&amp;#39; */: varchar(64)&lt;br/&gt; image_url  /* &amp;#39;明亮模式图片&amp;#39; */: varchar(256)&lt;br/&gt; dark_image_url  /* &amp;#39;暗黑模式图片&amp;#39; */: varchar(256)&lt;br/&gt; sort_num  /* &amp;#39;排序&amp;#39; */: int&lt;br/&gt; state  /* &amp;#39;状态  1--已禁用  2--已启用&amp;#39; */: tinyint&lt;br/&gt; up_name  /* &amp;#39;大写菜单名称&amp;#39; */: varchar(64)&lt;br/&gt; up_info_id  /* &amp;#39;大写菜单id&amp;#39; */: varchar(64)&lt;br/&gt; category  /* &amp;#39;图标类型&amp;#39; */: varchar(512)&lt;br/&gt; platform  /* &amp;#39;来源平台 1=开发端 2=运营端&amp;#39; */: tinyint&lt;br/&gt; is_sdk_builtin  /* &amp;#39;是否是sdk内置菜单 1=否 2=是&amp;#39; */: tinyint&lt;br/&gt; ext  /* &amp;#39;扩展字段&amp;#39; */: varchar(1024)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="890" width="371" height="494" as="geometry" />
+        </mxCell>
+        <mxCell id="node33" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;custom_menu_apply_pass_record&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_id  /* &amp;#39;应用 id&amp;#39; */: varchar(64)&lt;br/&gt; custom_menu_id  /* &amp;#39;api id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序 id&amp;#39; */: varchar(64)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="850" width="305" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="node47" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;custom_menu_apply_record&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; custom_menu_apply_record_id  /* &amp;#39;id&amp;#39; */: varchar(64)&lt;br/&gt; host_app_id  /* &amp;#39;应用 id&amp;#39; */: varchar(64)&lt;br/&gt; custom_menu_id  /* &amp;#39;api id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序 id&amp;#39; */: varchar(64)&lt;br/&gt; apply_desc  /* &amp;#39;申请说明&amp;#39; */: varchar(2048)&lt;br/&gt; reject_desc  /* &amp;#39;驳回说明&amp;#39; */: varchar(2048)&lt;br/&gt; apply_state  /* &amp;#39;申请状态  1--已申请  2--已通过  3--已驳回&amp;#39; */: tinyint&lt;br/&gt; apply_user_id  /* &amp;#39;申请者id&amp;#39; */: varchar(64)&lt;br/&gt; audit_user_id  /* &amp;#39;审核者id&amp;#39; */: varchar(64)&lt;br/&gt; workflow_instance_id  /* &amp;#39;流程实例id&amp;#39; */: varchar(48)&lt;br/&gt; expired  /* &amp;#39;申请记录是否过期 1-未过期 2-已过期&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1860" y="1170" width="399" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node82" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;custom_menu_config&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_id  /* &amp;#39;应用id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(64)&lt;br/&gt; is_open  /* &amp;#39;是否打开过  0--没有打开过  1--打开过&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="1010" width="351" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="node36" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;host_app&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_id  /* &amp;#39;宿主应用的id&amp;#39; */: varchar(64)&lt;br/&gt; name  /* &amp;#39;应用名称&amp;#39; */: varchar(64)&lt;br/&gt; dev_organ_id  /* &amp;#39;开发端企业ID&amp;#39; */: varchar(64)&lt;br/&gt; desc  /* &amp;#39;应用描述&amp;#39; */: varchar(1024)&lt;br/&gt; owner  /* &amp;#39;所属企业&amp;#39; */: varchar(64)&lt;br/&gt; logo  /* &amp;#39;应用图标网盘id&amp;#39; */: varchar(256)&lt;br/&gt; expire  /* &amp;#39;&amp;#39; */: bigint&lt;br/&gt; api_server  /* &amp;#39;子域名&amp;#39; */: varchar(256)&lt;br/&gt; platform  /* &amp;#39;来源平台&amp;#39; */: tinyint&lt;br/&gt; status_value  /* &amp;#39;应用状态&amp;#39; */: tinyint&lt;br/&gt; auto_bind  /* &amp;#39;运营端创建专用.设置自动关联后，开发端所有的小程序都会默认关联该应用&amp;#39; */: tinyint&lt;br/&gt; host_app_public  /* &amp;#39;是否设置为公开&amp;#39; */: tinyint&lt;br/&gt; bundle_public  /* &amp;#39;共享给其他企业的场景下，开发端展示该应用 BundlelD、SDK Key、Sercret 等 SDK 集成信息&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1030" y="390" width="542" height="428" as="geometry" />
+        </mxCell>
+        <mxCell id="node46" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;host_app_bundle&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_bundle_id  /* &amp;#39;业务id&amp;#39; */: varchar(64)&lt;br/&gt; bundle_id  /* &amp;#39;bundleId&amp;#39; */: varchar(512)&lt;br/&gt; host_app_id  /* &amp;#39;应用Id&amp;#39; */: varchar(64)&lt;br/&gt; bundle_platform  /* &amp;#39;类型 1=ios 2=android 3=ios&amp;amp;android 4=windows&amp;#39; */: tinyint&lt;br/&gt; platform  /* &amp;#39;平台 1=开发端 2=运营端&amp;#39; */: tinyint&lt;br/&gt; sdk_key  /* &amp;#39;sdkKey&amp;#39; */: varchar(512)&lt;br/&gt; sdk_id  /* &amp;#39;sdkid&amp;#39; */: varchar(64)&lt;br/&gt; is_first_create  /* &amp;#39;是否第一次创建&amp;#39; */: tinyint&lt;br/&gt; state  /* &amp;#39;状态&amp;#39; */: tinyint&lt;br/&gt; is_review  /* &amp;#39;是否审核应用 0=非 1=是&amp;#39; */: tinyint&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="400" width="421" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node29" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;host_app_mini_app_relation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; host_app_id  /* &amp;#39;关联应用的id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(64)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1870" y="434" width="290" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="node49" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;host_app_mini_app_relation_audit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; audit_id  /* &amp;#39;审核id&amp;#39; */: varchar(64)&lt;br/&gt; host_app_id  /* &amp;#39;关联应用的id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(64)&lt;br/&gt; audit_status  /* &amp;#39;审核状态  1--已关联  2--已审核中  3--已驳回&amp;#39; */: tinyint&lt;br/&gt; is_cancelled  /* &amp;#39;是否取消关联  0--未取消关联 1--已取消关联&amp;#39; */: tinyint&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2500" y="670" width="416" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="node55" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; app_class  /* &amp;#39;小程序分类&amp;#39; */: varchar(48)&lt;br/&gt; app_tag  /* &amp;#39;小程序分类&amp;#39; */: varchar(2056)&lt;br/&gt; name  /* &amp;#39;小程序名称&amp;#39; */: varchar(48)&lt;br/&gt; logo  /* &amp;#39;小程序logo&amp;#39; */: varchar(1024)&lt;br/&gt; desc  /* &amp;#39;小程序简介&amp;#39; */: varchar(1024)&lt;br/&gt; detail_desc  /* &amp;#39;小程序详细描述&amp;#39; */: varchar(1024)&lt;br/&gt; is_rollback  /* &amp;#39;是否回滚&amp;#39; */: bigint&lt;br/&gt; is_forbidden  /* &amp;#39;是否禁用&amp;#39; */: bigint&lt;br/&gt; privacy_setting_type  /* &amp;#39;是否设置隐私&amp;#39; */: tinyint(1)&lt;br/&gt; project_type  /* &amp;#39;项目类型&amp;#39; */: tinyint(1)&lt;br/&gt; expire  /* &amp;#39;小程序过期时间&amp;#39; */: bigint&lt;br/&gt; is_bind_wechat  /* &amp;#39;是否关联微信&amp;#39; */: tinyint(1)&lt;br/&gt; bind_wechat_time  /* &amp;#39;关联微信时间&amp;#39; */: bigint&lt;br/&gt; publish_time  /* &amp;#39;上架时间&amp;#39; */: bigint&lt;br/&gt; status_value  /* &amp;#39;当前小程序状态信息&amp;#39; */: tinyint&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2460" y="80" width="331" height="516" as="geometry" />
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-1" value="" style="endArrow=none;html=1;rounded=0;exitX=1.001;exitY=0.224;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.001;entryY=0.107;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node46" target="node36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="480" as="sourcePoint" />
+            <mxPoint x="940" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-2" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-1">
+          <mxGeometry x="-0.4432" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-3" value="" style="endArrow=none;html=1;rounded=0;exitX=1.006;exitY=0.197;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.007;entryY=0.112;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node82" target="node36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="900" as="sourcePoint" />
+            <mxPoint x="910" y="850" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="950" y="1051" />
+              <mxPoint x="950" y="438" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-4" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-3">
+          <mxGeometry x="-0.3044" y="-1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-5" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.117;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.005;exitY=0.14;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node6" target="node36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="860" as="sourcePoint" />
+            <mxPoint x="870" y="810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="970" y="959" />
+              <mxPoint x="970" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-6" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-5">
+          <mxGeometry x="-0.6306" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-7" value="" style="endArrow=none;html=1;rounded=0;exitX=1.002;exitY=0.09;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node36" target="node29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1770" y="380" as="sourcePoint" />
+            <mxPoint x="1820" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-8" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-7">
+          <mxGeometry x="0.3428" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-9" value="" style="endArrow=none;html=1;rounded=0;exitX=1.001;exitY=0.088;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.327;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node6" target="node33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1730" y="750" as="sourcePoint" />
+            <mxPoint x="1780" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-10" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-9">
+          <mxGeometry x="0.3019" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1.001;exitY=0.094;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.186;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node36" target="node47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1720" y="800" as="sourcePoint" />
+            <mxPoint x="1760" y="1090" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1610" y="430" />
+              <mxPoint x="1610" y="1241" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-12" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-11">
+          <mxGeometry x="0.6373" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-13" value="" style="endArrow=none;html=1;rounded=0;exitX=1.004;exitY=0.099;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node6" target="node47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1690" y="1110" as="sourcePoint" />
+            <mxPoint x="1740" y="1060" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1570" y="939" />
+              <mxPoint x="1570" y="1266" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-14" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-13">
+          <mxGeometry x="0.3496" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-15" value="" style="endArrow=none;html=1;rounded=0;exitX=1.005;exitY=0.287;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.014;entryY=0.089;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node47" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2420" y="1180" as="sourcePoint" />
+            <mxPoint x="2470" y="1130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2420" y="1280" />
+              <mxPoint x="2420" y="126" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-16" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-15">
+          <mxGeometry x="-0.8199" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-17" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.006;entryY=0.092;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.008;exitY=0.363;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node29" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2030" y="320" as="sourcePoint" />
+            <mxPoint x="2080" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-18" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-17">
+          <mxGeometry x="-0.876" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-19" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.004;exitY=0.117;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node36" target="node70">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="240" as="sourcePoint" />
+            <mxPoint x="1080" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="990" y="440" />
+              <mxPoint x="990" y="-107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-20" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-19">
+          <mxGeometry x="-0.1183" y="-1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-21" value="" style="endArrow=none;html=1;rounded=0;exitX=1.012;exitY=0.153;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.011;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node70" target="node68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1550" y="-90" as="sourcePoint" />
+            <mxPoint x="1600" y="-140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-22" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-21">
+          <mxGeometry x="0.4465" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-23" value="" style="endArrow=none;html=1;rounded=0;exitX=0.996;exitY=0.447;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.006;entryY=0.094;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node33" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2250" y="1050" as="sourcePoint" />
+            <mxPoint x="2300" y="1000" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2230" y="943" />
+              <mxPoint x="2230" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-24" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-23">
+          <mxGeometry x="-0.5445" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-25" value="" style="endArrow=none;html=1;rounded=0;exitX=0.997;exitY=0.447;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.001;entryY=0.092;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node68" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2420" y="-140" as="sourcePoint" />
+            <mxPoint x="2470" y="-190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2370" y="43" />
+              <mxPoint x="2370" y="128" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-26" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-25">
+          <mxGeometry x="-0.6551" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-27" value="" style="endArrow=none;html=1;rounded=0;exitX=0.999;exitY=0.146;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node70" target="node57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1630" y="-440" as="sourcePoint" />
+            <mxPoint x="1680" y="-490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-28" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-27">
+          <mxGeometry x="-0.1116" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-29" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.005;entryY=0.175;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.002;exitY=0.093;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node36" target="node57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1770" y="-310" as="sourcePoint" />
+            <mxPoint x="1820" y="-360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1800" y="430" />
+              <mxPoint x="1800" y="-543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-30" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-29">
+          <mxGeometry x="0.5544" y="-4" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-31" value="" style="endArrow=none;html=1;rounded=0;entryX=0.001;entryY=0.094;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.289;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node57" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2430" y="-300" as="sourcePoint" />
+            <mxPoint x="2480" y="-350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2430" y="-499" />
+              <mxPoint x="2430" y="128" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-32" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-31">
+          <mxGeometry x="-0.1898" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-33" value="" style="endArrow=none;html=1;rounded=0;exitX=1.002;exitY=0.097;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.002;entryY=0.289;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node36" target="node49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1890" y="760" as="sourcePoint" />
+            <mxPoint x="1940" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1660" y="432" />
+              <mxPoint x="1660" y="743" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-34" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-33">
+          <mxGeometry x="0.7436" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-35" value="" style="endArrow=none;html=1;rounded=0;entryX=0.999;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.011;exitY=0.373;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node49" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2920" y="350" as="sourcePoint" />
+            <mxPoint x="2970" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2980" y="764" />
+              <mxPoint x="2980" y="123" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PY4U6vWGnncnoND7lRdi-36" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="PY4U6vWGnncnoND7lRdi-35">
+          <mxGeometry x="-0.1417" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
