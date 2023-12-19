@@ -1,0 +1,297 @@
+<mxfile host="app.diagrams.net" modified="2023-12-19T10:33:49.158Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="s1OcssZdGsRqcfSa30QF" version="21.6.6" type="github">
+  <diagram id="7bmtyRImc4BAid550Nkk" name="Page-1">
+    <mxGraphModel dx="3190" dy="2068" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node31" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;canary_release&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; canary_release_id  /* &amp;#39;灰度发布Id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;appId&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_version_id  /* &amp;#39;小程序版本Id&amp;#39; */: varchar(64)&lt;br/&gt; name  /* &amp;#39;该灰度发布的名称&amp;#39; */: varchar(64)&lt;br/&gt; pub_desc  /* &amp;#39;发布说明&amp;#39; */: varchar(1024)&lt;br/&gt; sequence  /* &amp;#39;小程序序列号&amp;#39; */: int&lt;br/&gt; version_str  /* &amp;#39;版本号&amp;#39; */: varchar(32)&lt;br/&gt; rule_status  /* &amp;#39;展示给前端的状态&amp;#39; */: tinyint&lt;br/&gt; logic_grammar  /* &amp;#39;逻辑语句&amp;#39; */: varchar(512)&lt;br/&gt; logic_grammar_desc  /* &amp;#39;逻辑描述&amp;#39; */: varchar(1024)&lt;br/&gt; logic_structure  /* &amp;#39;逻辑结构化描述&amp;#39; */: text&lt;br/&gt; begin_time  /* &amp;#39;开始时间&amp;#39; */: bigint&lt;br/&gt; end_time  /* &amp;#39;结束时间&amp;#39; */: bigint&lt;br/&gt; actual_end_time  /* &amp;#39;实际结束时间&amp;#39; */: bigint&lt;br/&gt; logic_relation  /* &amp;#39;规则关系&amp;#39; */: varchar(64)&lt;br/&gt; trial_users_file  /* &amp;#39;白名单用户的文件id&amp;#39; */: varchar(64)&lt;br/&gt; traffic_percent  /* &amp;#39;流量百分比&amp;#39; */: int&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="970" width="345" height="538" as="geometry" />
+        </mxCell>
+        <mxCell id="node48" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;canary_release_rule&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; canary_release_rule_id  /* &amp;#39;灰度发布规则Id&amp;#39; */: varchar(48)&lt;br/&gt; canary_release_id  /* &amp;#39;灰度发布Id&amp;#39; */: varchar(64)&lt;br/&gt; canary_rule_id  /* &amp;#39;灰度发布规则索引Id&amp;#39; */: varchar(48)&lt;br/&gt; serialNum  /* &amp;#39;序列号&amp;#39; */: int&lt;br/&gt; is_batch  /* &amp;#39;是否批量导入&amp;#39; */: tinyint&lt;br/&gt; name  /* &amp;#39;子规则名&amp;#39; */: varchar(64)&lt;br/&gt; check_type  /* &amp;#39;校验类型&amp;#39; */: tinyint&lt;br/&gt; release_rule_type  /* &amp;#39;发布规则类型 1=普通 2=体验用户&amp;#39; */: tinyint&lt;br/&gt; operation  /* &amp;#39;提前生成的操作符&amp;#39; */: varchar(4096)&lt;br/&gt; value  /* &amp;#39;值&amp;#39; */: text&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-470" y="940" width="392" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node45" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;canary_rule&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; canary_rule_id  /* &amp;#39;唯一id&amp;#39; */: varchar(48)&lt;br/&gt; rule_type  /* &amp;#39;类型 1:内置 2:用户新增 3:特殊&amp;#39; */: tinyint&lt;br/&gt; rule_key  /* &amp;#39;配置的Key不能重复&amp;#39; */: varchar(128)&lt;br/&gt; rule_name  /* &amp;#39;配置名&amp;#39; */: varchar(64)&lt;br/&gt; resource_value  /* &amp;#39;资源列表&amp;#39; */: text&lt;br/&gt; value_type  /* &amp;#39;配置的值类型&amp;#39; */: tinyint&lt;br/&gt; val_netdisk_id  /* &amp;#39;用户文件网盘id&amp;#39; */: varchar(32)&lt;br/&gt; file_name  /* &amp;#39;文件名称&amp;#39; */: varchar(64)&lt;br/&gt; permit_check_list  /* &amp;#39;可选的操作类型&amp;#39; */: varchar(128)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;br/&gt; delete_time  /* &amp;#39;删除时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-390" y="1410" width="344" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; app_class  /* &amp;#39;小程序分类&amp;#39; */: varchar(48)&lt;br/&gt; app_tag  /* &amp;#39;小程序分类&amp;#39; */: varchar(2056)&lt;br/&gt; name  /* &amp;#39;小程序名称&amp;#39; */: varchar(48)&lt;br/&gt; logo  /* &amp;#39;小程序logo&amp;#39; */: varchar(1024)&lt;br/&gt; desc  /* &amp;#39;小程序简介&amp;#39; */: varchar(1024)&lt;br/&gt; detail_desc  /* &amp;#39;小程序详细描述&amp;#39; */: varchar(1024)&lt;br/&gt; is_rollback  /* &amp;#39;是否回滚&amp;#39; */: bigint&lt;br/&gt; is_forbidden  /* &amp;#39;是否禁用&amp;#39; */: bigint&lt;br/&gt; privacy_setting_type  /* &amp;#39;是否设置隐私&amp;#39; */: tinyint(1)&lt;br/&gt; project_type  /* &amp;#39;项目类型&amp;#39; */: tinyint(1)&lt;br/&gt; expire  /* &amp;#39;小程序过期时间&amp;#39; */: bigint&lt;br/&gt; is_bind_wechat  /* &amp;#39;是否关联微信&amp;#39; */: tinyint(1)&lt;br/&gt; bind_wechat_time  /* &amp;#39;关联微信时间&amp;#39; */: bigint&lt;br/&gt; publish_time  /* &amp;#39;上架时间&amp;#39; */: bigint&lt;br/&gt; status_value  /* &amp;#39;当前小程序状态信息&amp;#39; */: tinyint&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="320" width="331" height="516" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_version_audit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_audit_id  /* &#39;小程序审核记录id&#39; */: varchar(48)&lt;br&gt; mini_app_version_id  /* &#39;小程序版本id&#39; */: varchar(48)&lt;br&gt; mini_app_id  /* &#39;小程序id&#39; */: varchar(48)&lt;br&gt; status_value  /* &#39;审核状态&#39; */: tinyint&lt;br&gt; mini_app_audit_type  /* &#39;小程序审核方式&#39; */: tinyint&lt;br&gt; workflow_instance_id  /* &#39;流程实例id&#39; */: varchar(48)&lt;br&gt; organ_id  /* &#39;企业id&#39; */: varchar(48)&lt;br&gt; create_by  /* &#39;创建人&#39; */: varchar(48)&lt;br&gt; update_by  /* &#39;更新人&#39; */: varchar(48)&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-10" y="1630" width="352" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="node21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_before_compile_info&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_before_compile_id  /* &amp;#39;小程序代码包编译前信息id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;App id&amp;#39; */: varchar(64)&lt;br/&gt; user_id  /* &amp;#39;用户id&amp;#39; */: varchar(64)&lt;br/&gt; file_name  /* &amp;#39;文件名&amp;#39; */: varchar(64)&lt;br/&gt; file_url  /* &amp;#39;文件地址&amp;#39; */: varchar(128)&lt;br/&gt; content  /* &amp;#39;&amp;#39; */: text&lt;br/&gt; version  /* &amp;#39;版本&amp;#39; */: varchar(64)&lt;br/&gt; version_remark  /* &amp;#39;VersionRemark&amp;#39; */: varchar(256)&lt;br/&gt; cmd  /* &amp;#39;编译上传类型&amp;#39; */: tinyint&lt;br/&gt; compile_status  /* &amp;#39;编译状态&amp;#39; */: varchar(64)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-65.5" y="-80" width="463" height="384" as="geometry" />
+        </mxCell>
+        <mxCell id="node55" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_compiled_package&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_compiled_package_id  /* &amp;#39;小程序代码包编译后信息id&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_before_compile_id  /* &amp;#39;小程序代码包编译前信息id&amp;#39; */: varchar(64)&lt;br/&gt; compiled_package_type  /* &amp;#39;代码包类型 1:正常版本 2:被设置为体验版&amp;#39; */: tinyint&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(64)&lt;br/&gt; user_id  /* &amp;#39;用户id&amp;#39; */: varchar(64)&lt;br/&gt; version  /* &amp;#39;上传版本号&amp;#39; */: varchar(64)&lt;br/&gt; version_description  /* &amp;#39;版本描述&amp;#39; */: varchar(2048)&lt;br/&gt; file_md5  /* &amp;#39;md5&amp;#39; */: varchar(512)&lt;br/&gt; name  /* &amp;#39;包名&amp;#39; */: varchar(256)&lt;br/&gt; source_file_url  /* &amp;#39;源码包下载地址&amp;#39; */: varchar(512)&lt;br/&gt; compiled_file_url  /* &amp;#39;编译包下载地址&amp;#39; */: varchar(512)&lt;br/&gt; encrypted_url  /* &amp;#39;加密后下载地址&amp;#39; */: varchar(512)&lt;br/&gt; encrypted_file_md5  /* &amp;#39;加密包md5&amp;#39; */: varchar(512)&lt;br/&gt; encrypted_file_sha256  /* &amp;#39;加密包sha256&amp;#39; */: varchar(512)&lt;br/&gt; ftpkg_url  /* &amp;#39;ftpkg加密后下载地址&amp;#39; */: varchar(512)&lt;br/&gt; ftpkg_sha256  /* &amp;#39;ftpkg加密包sha256&amp;#39; */: varchar(512)&lt;br/&gt; basic_pack_ver  /* &amp;#39;基础库版本&amp;#39; */: varchar(48)&lt;br/&gt; packages  /* &amp;#39;分包信息&amp;#39; */: text&lt;br/&gt; encrypt_packages  /* &amp;#39;加密分包信息&amp;#39; */: text&lt;br/&gt; path_and_query  /* &amp;#39;启动页面path和query&amp;#39; */: text&lt;br/&gt; package_config  /* &amp;#39;扩展数据&amp;#39; */: text&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="532.5" y="-110" width="485" height="626" as="geometry" />
+        </mxCell>
+        <mxCell id="node9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_domain&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_domain_id  /* &amp;#39;小程序域名id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; domain  /* &amp;#39;域名&amp;#39; */: varchar(512)&lt;br/&gt; domain_status  /* &amp;#39;状态&amp;#39; */: tinyint(1)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1175" y="1040" width="345" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_domain_audit&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_domain_audit_id  /* &amp;#39;小程序域名申请记录id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; workflow_instance_id  /* &amp;#39;流程实例id&amp;#39; */: varchar(48)&lt;br/&gt; audit_content  /* &amp;#39;申请域名内容&amp;#39; */: text&lt;br/&gt; audit_type  /* &amp;#39;域名审核方式&amp;#39; */: tinyint&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1175" y="1370" width="430" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="node37" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_favorite&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; current_user_id  /* &amp;#39;用户唯一标识&amp;#39; */: varchar(64)&lt;br/&gt; app_id  /* &amp;#39;小程序 id&amp;#39; */: varchar(64)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2040" y="139" width="316" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="node23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_privacy_setting&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(64)&lt;br/&gt; commit_type  /* &amp;#39;提交类型&amp;#39; */: tinyint(1)&lt;br/&gt; user_message_type  /* &amp;#39;用户使用类型&amp;#39; */: text&lt;br/&gt; sdk_message  /* &amp;#39;sdk信息&amp;#39; */: text&lt;br/&gt; contact_info_phone  /* &amp;#39;联系方式&amp;#39; */: varchar(128)&lt;br/&gt; contact_info_email  /* &amp;#39;联系方式&amp;#39; */: varchar(128)&lt;br/&gt; contact_info_wechat  /* &amp;#39;联系方式&amp;#39; */: varchar(128)&lt;br/&gt; contact_info_other  /* &amp;#39;联系方式&amp;#39; */: varchar(128)&lt;br/&gt; fixed_storage_time  /* &amp;#39;固定存储时间&amp;#39; */: bigint&lt;br/&gt; is_shortest_time  /* &amp;#39;是否是最短时间&amp;#39; */: tinyint(1)&lt;br/&gt; additional_doc_name  /* &amp;#39;补充文档名称&amp;#39; */: varchar(128)&lt;br/&gt; additional_doc_net_disk_id  /* &amp;#39;补充文档网盘id&amp;#39; */: varchar(64)&lt;br/&gt; additional_doc_content  /* &amp;#39;补充文档内容&amp;#39; */: mediumtext&lt;br/&gt; is_first_save  /* &amp;#39;是否第一次保存&amp;#39; */: tinyint(1)&lt;br/&gt; effective_time  /* &amp;#39;生效时间&amp;#39; */: bigint&lt;br/&gt; custom_doc_name  /* &amp;#39;自定义文档名称&amp;#39; */: varchar(64)&lt;br/&gt; custom_doc_url  /* &amp;#39;自定义文档链接&amp;#39; */: varchar(256)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1520" y="-190" width="401" height="538" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_qr_code&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; type  /* &amp;#39;二维码的类型&amp;#39; */: tinyint(1)&lt;br/&gt; uuid  /* &amp;#39;标识该二维码&amp;#39; */: varchar(64)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序Id&amp;#39; */: varchar(64)&lt;br/&gt; sequence  /* &amp;#39;递增序列号&amp;#39; */: bigint&lt;br/&gt; api_server  /* &amp;#39;小程序apiServer&amp;#39; */: varchar(256)&lt;br/&gt; business_id  /* &amp;#39;业务id&amp;#39; */: varchar(64)&lt;br/&gt; path_and_query  /* &amp;#39;小程序启动参数&amp;#39; */: text&lt;br/&gt; expire_time  /* &amp;#39;过期时间&amp;#39; */: bigint&lt;br/&gt; debug_info  /* &amp;#39;扩展数据&amp;#39; */: text&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1800" y="470" width="304" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node32" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_status_history&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_status_history_id  /* &amp;#39;小程序状态历史id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; status_value  /* &amp;#39;当前小程序状态信息&amp;#39; */: tinyint&lt;br/&gt; status_reason  /* &amp;#39;当前小程序状态原因&amp;#39; */: varchar(1024)&lt;br/&gt; operator_id  /* &amp;#39;操作人id&amp;#39; */: varchar(48)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1175" y="-510" width="413" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="node24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_version&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_version_id  /* &amp;#39;小程序版本id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_compiled_package_id  /* &amp;#39;小程序代码包id&amp;#39; */: varchar(48)&lt;br/&gt; sequence  /* &amp;#39;递增序列号&amp;#39; */: bigint&lt;br/&gt; name  /* &amp;#39;小程序名称&amp;#39; */: varchar(48)&lt;br/&gt; logo  /* &amp;#39;小程序logo&amp;#39; */: varchar(1024)&lt;br/&gt; version  /* &amp;#39;版本号&amp;#39; */: varchar(48)&lt;br/&gt; desc  /* &amp;#39;小程序简介&amp;#39; */: varchar(1024)&lt;br/&gt; detail_desc  /* &amp;#39;小程序详细描述&amp;#39; */: varchar(1024)&lt;br/&gt; app_class  /* &amp;#39;小程序分类&amp;#39; */: varchar(128)&lt;br/&gt; app_tag  /* &amp;#39;小程序标签&amp;#39; */: varchar(128)&lt;br/&gt; status_value  /* &amp;#39;当前小程序状态信息&amp;#39; */: tinyint&lt;br/&gt; auto_pub  /* &amp;#39;是否审核通过之后自动上架&amp;#39; */: tinyint(1)&lt;br/&gt; in_gray_release  /* &amp;#39;是否灰度中&amp;#39; */: tinyint(1)&lt;br/&gt; is_rollback  /* &amp;#39;是否回滚&amp;#39; */: tinyint(1)&lt;br/&gt; test_info  /* &amp;#39;测试信息&amp;#39; */: text&lt;br/&gt; expire_time  /* &amp;#39;小程序过期时间&amp;#39; */: bigint&lt;br/&gt; version_description  /* &amp;#39;版本描述&amp;#39; */: varchar(2048)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="970" width="430" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="node27" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;mini_app_version_status_history&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_version_status_history_id  /* &amp;#39;小程序版本状态历史id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(48)&lt;br/&gt; mini_app_version_id  /* &amp;#39;小程序版本id&amp;#39; */: varchar(48)&lt;br/&gt; status_value  /* &amp;#39;当前小程序状态信息&amp;#39; */: tinyint&lt;br/&gt; status_reason  /* &amp;#39;当前小程序状态原因&amp;#39; */: varchar(1024)&lt;br/&gt; operator_id  /* &amp;#39;操作人id&amp;#39; */: varchar(48)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="550" y="1630" width="490" height="296" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;wechat_login_info&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(40)&lt;br/&gt; wechat_origin_id  /* &amp;#39;微信小程序原始ID&amp;#39; */: varchar(40)&lt;br/&gt; profile_url  /* &amp;#39;昵称头像url&amp;#39; */: varchar(256)&lt;br/&gt; phone_url  /* &amp;#39;电话号码url&amp;#39; */: varchar(256)&lt;br/&gt; payment_url  /* &amp;#39;支付跳转url&amp;#39; */: varchar(256)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="640" width="346" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;wechat_other_info&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(40)&lt;br/&gt; field_name  /* &amp;#39;字段名称&amp;#39; */: varchar(40)&lt;br/&gt; page_url  /* &amp;#39;页面路径&amp;#39; */: varchar(256)&lt;br/&gt; organ_id  /* &amp;#39;企业id&amp;#39; */: varchar(48)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1837" y="1190" width="267" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="node25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;wechat_qrcode_info&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; wechat_info_id  /* &amp;#39;小程序id&amp;#39; */: varchar(40)&lt;br/&gt; mini_app_id  /* &amp;#39;小程序id&amp;#39; */: varchar(40)&lt;br/&gt; organ_id  /* &amp;#39;组织id&amp;#39; */: varchar(40)&lt;br/&gt; wechat_app_secret  /* &amp;#39;wechat_app_secret&amp;#39; */: varchar(40)&lt;br/&gt; wechat_app_id  /* &amp;#39;wechat_app_id&amp;#39; */: varchar(40)&lt;br/&gt; wechat_path  /* &amp;#39;wechat_path&amp;#39; */: varchar(128)&lt;br/&gt; wechat_size  /* &amp;#39;wechat_size&amp;#39; */: varchar(40)&lt;br/&gt; qrcode_url  /* &amp;#39;qrcode_url&amp;#39; */: varchar(128)&lt;br/&gt; qrcode_download_url  /* &amp;#39;qrcode_download_url&amp;#39; */: varchar(128)&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; idd  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="952" width="405" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-1" value="" style="endArrow=none;html=1;rounded=0;entryX=0.001;entryY=0.086;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.006;exitY=0.091;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node13" target="node23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1290" y="180" as="sourcePoint" />
+            <mxPoint x="1340" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-2" value="1:1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-1">
+          <mxGeometry x="-0.2448" relative="1" as="geometry">
+            <mxPoint x="-1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-3" value="" style="endArrow=none;html=1;rounded=0;exitX=1.008;exitY=0.117;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;entryX=-0.002;entryY=0.094;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node24" target="node13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="800" as="sourcePoint" />
+            <mxPoint x="1090" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-4" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-3">
+          <mxGeometry x="0.0269" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-5" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.004;entryY=0.084;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.997;exitY=0.168;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node31" target="node24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="1060" as="sourcePoint" />
+            <mxPoint x="570" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-6" value="1:1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-5">
+          <mxGeometry x="-0.6922" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-7" value="" style="endArrow=none;html=1;rounded=0;exitX=1.005;exitY=0.179;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node48" target="node31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-80" y="900" as="sourcePoint" />
+            <mxPoint x="-30" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-8" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-7">
+          <mxGeometry x="-0.0556" y="-4" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-9" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=-0.005;exitY=0.123;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node45" target="node48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-500" y="1310" as="sourcePoint" />
+            <mxPoint x="-450" y="1260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-510" y="1457" />
+              <mxPoint x="-510" y="1030" />
+              <mxPoint x="-470" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-10" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-9">
+          <mxGeometry x="-0.1436" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1.005;exitY=0.218;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.001;entryY=0.087;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node0" target="node24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="1680" as="sourcePoint" />
+            <mxPoint x="470" y="1630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1694" />
+              <mxPoint x="500" y="1019" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-12" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-11">
+          <mxGeometry x="-0.0439" y="2" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-13" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.01;entryY=0.369;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="node37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1430" y="370" as="sourcePoint" />
+            <mxPoint x="1770" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2000" y="371" />
+              <mxPoint x="2000" y="208" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-14" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-13">
+          <mxGeometry x="0.1493" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-15" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.011;entryY=0.278;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="node8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1430" y="370" as="sourcePoint" />
+            <mxPoint x="1610" y="480" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1610" y="371" />
+              <mxPoint x="1610" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-16" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-15">
+          <mxGeometry x="-0.0698" y="1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-17" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1280" y="1190" as="sourcePoint" />
+            <mxPoint x="1430" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1520" y="1110" />
+              <mxPoint x="1590" y="1110" />
+              <mxPoint x="1590" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-18" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-17">
+          <mxGeometry x="-0.0544" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-19" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1300" y="1240" as="sourcePoint" />
+            <mxPoint x="1520" y="1090" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1670" y="1439" />
+              <mxPoint x="1670" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-20" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-19">
+          <mxGeometry x="-0.508" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-21" value="" style="endArrow=none;html=1;rounded=0;entryX=1.004;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.003;exitY=0.316;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node27" target="node24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="1760" as="sourcePoint" />
+            <mxPoint x="1080" y="1710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1090" y="1724" />
+              <mxPoint x="1090" y="1017" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-22" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-21">
+          <mxGeometry x="-0.3309" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-23" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.001;entryY=0.197;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" target="node3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1430" y="370" as="sourcePoint" />
+            <mxPoint x="1540" y="900" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1730" y="371" />
+              <mxPoint x="1730" y="1235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-24" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-23">
+          <mxGeometry x="0.3679" y="2" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-25" value="" style="endArrow=none;html=1;rounded=0;exitX=1.007;exitY=0.098;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.004;entryY=0.201;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node13" target="node25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1920" y="990" as="sourcePoint" />
+            <mxPoint x="1970" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1480" y="371" />
+              <mxPoint x="1480" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-26" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-25">
+          <mxGeometry x="0.5648" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-28" value="" style="endArrow=none;html=1;rounded=0;exitX=0.997;exitY=0.104;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.005;entryY=0.178;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node13" target="node10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1860" y="910" as="sourcePoint" />
+            <mxPoint x="1910" y="860" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2120" y="374" />
+              <mxPoint x="2120" y="689" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-29" value="1:1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-28">
+          <mxGeometry x="0.3962" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-30" value="" style="endArrow=none;html=1;rounded=0;entryX=0.002;entryY=0.075;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.012;exitY=0.167;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node24" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="600" as="sourcePoint" />
+            <mxPoint x="1210" y="20" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="523" y="1064" />
+              <mxPoint x="523" y="-63" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-34" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-30">
+          <mxGeometry x="-0.3827" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-31" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.002;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.998;exitY=0.118;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node21" target="node55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="440" as="sourcePoint" />
+            <mxPoint x="200" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-32" value="1:1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-31">
+          <mxGeometry x="-0.4201" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-35" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.01;exitY=0.101;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="node13" target="node32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="850" y="-430" as="sourcePoint" />
+            <mxPoint x="900" y="-480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FE78XRo27MvpOzvFZN-v-36" value="1:n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=21;" vertex="1" connectable="0" parent="FE78XRo27MvpOzvFZN-v-35">
+          <mxGeometry x="-0.058" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
