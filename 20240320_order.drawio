@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" modified="2024-03-20T14:43:21.996Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="K_8DzMI4xxIxxd7GaeE1" version="24.0.7" type="github">
+  <diagram id="zNb1x3cQg4pilKuktlUs" name="Page-1">
+    <mxGraphModel dx="1909" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;orders(订单)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_id  /* &#39;订单id&#39; */: varchar(64)&lt;br&gt; origin_amount  /* &#39;总金额，单位分&#39; */: bigint&lt;br&gt; real_amount  /* &#39;实际支付金额，单位分&#39; */: bigint&lt;br&gt; status  /* &#39;订单状态&#39; */: tinyint&lt;br&gt; payment_time  /* &#39;支付时间&#39; */: bigint&lt;br&gt; organ_id  /* &#39;企业id&#39; */: varchar(48)&lt;br&gt; create_by  /* &#39;创建人&#39; */: varchar(48)&lt;br&gt; update_by  /* &#39;更新人&#39; */: varchar(48)&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="40" width="299" height="317" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;orders_item(订单项)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; order_item_id  /* &#39;订单项id&#39; */: varchar(64)&lt;br&gt; sku_id  /* &#39;sku_id&#39; */: varchar(64)&lt;br&gt; order_id  /* &#39;订单id&#39; */: varchar(64)&lt;br&gt; quantity  /* &#39;数量&#39; */: bigint&lt;br&gt; unit_amount  /* &#39;单价,单位分&#39; */: bigint&lt;br&gt; total_amount  /* &#39;总价,单位分&#39; */: bigint&lt;br&gt; discount  /* &#39;常驻折扣&#39; */: decimal(5,4)&lt;br&gt; type  /* &#39;类型&#39; */: tinyint&lt;br&gt; desc  /* &#39;描述&#39; */: varchar(1024)&lt;br&gt; attributes  /* &#39;属性&#39; */: text&lt;br&gt; organ_id  /* &#39;企业id&#39; */: varchar(48)&lt;br&gt; create_by  /* &#39;创建人&#39; */: varchar(48)&lt;br&gt; update_by  /* &#39;更新人&#39; */: varchar(48)&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="60" width="279" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;payment(付款)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; payment_id  /* &#39;付款id&#39; */: varchar(64)&lt;br&gt; order_id  /* &#39;订单id&#39; */: varchar(64)&lt;br&gt; amount  /* &#39;金额，单位分&#39; */: bigint&lt;br&gt; channel  /* &#39;支付渠道 1:微信，2:支付宝 3:银证转账&#39; */: tinyint&lt;br&gt; status  /* &#39;支付状态 1:支付中，2:支付完成，3:支付失败，4:已过期，5:关闭&#39; */: tinyint&lt;br&gt; callback_addr  /* &#39;回调地址&#39; */: varchar(256)&lt;br&gt; callback_status  /* &#39;回调状态，1:未回调，2:回调中，3:回调完成，4:回调失败&#39; */: tinyint&lt;br&gt; callback_retry_count  /* &#39;回调重试次数&#39; */: bigint&lt;br&gt; callback_payload  /* &#39;回调参数&#39; */: text&lt;br&gt; pay_retry_count  /* &#39;支付重试次数&#39; */: int&lt;br&gt; failed_reason  /* &#39;失败原因&#39; */: text&lt;br&gt; paid_time  /* &#39;支付时间&#39; */: bigint&lt;br&gt; attributes  /* &#39;跟支付方式挂钩的附加信息。json序列化后存储&#39; */: text&lt;br&gt; organ_id  /* &#39;企业id&#39; */: varchar(48)&lt;br&gt; create_by  /* &#39;创建人&#39; */: varchar(48)&lt;br&gt; update_by  /* &#39;更新人&#39; */: varchar(48)&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-330" y="430" width="495" height="493" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;product(产品表)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; product_id  /* &#39;产品id&#39; */: varchar(64)&lt;br&gt; category  /* &#39;产品类别&#39; */: int&lt;br&gt; attributes  /* &#39;产品的属性, 序列化后的字符串&#39; */: text&lt;br&gt; create_by  /* &#39;创建人&#39; */: varchar(48)&lt;br&gt; update_by  /* &#39;更新人&#39; */: varchar(48)&lt;br&gt; create_time  /* &#39;创建时间&#39; */: bigint&lt;br&gt; update_time  /* &#39;更新时间&#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &#39;自增id&#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-280" width="310" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;sku&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; sku_id  /* &amp;#39;sku_id&amp;#39; */: varchar(64)&lt;br/&gt; product_id  /* &amp;#39;产品id&amp;#39; */: varchar(64)&lt;br/&gt; price  /* &amp;#39;价格,单位分&amp;#39; */: bigint&lt;br/&gt; discount  /* &amp;#39;常驻折扣&amp;#39; */: decimal(5,4)&lt;br/&gt; attributes  /* &amp;#39;sku的属性, 序列化后的字符串&amp;#39; */: text&lt;br/&gt; create_by  /* &amp;#39;创建人&amp;#39; */: varchar(48)&lt;br/&gt; update_by  /* &amp;#39;更新人&amp;#39; */: varchar(48)&lt;br/&gt; create_time  /* &amp;#39;创建时间&amp;#39; */: bigint&lt;br/&gt; update_time  /* &amp;#39;更新时间&amp;#39; */: bigint&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt; id  /* &amp;#39;自增id&amp;#39; */: bigint&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="-280" width="306" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-2" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.007;exitY=0.188;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node2" target="node0">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="-320" as="sourcePoint" />
+            <mxPoint x="170" y="-370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;1:n&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="d5_IVzS--7n-4lWaoAS6-2">
+          <mxGeometry x="-0.5142" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-4" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.994;exitY=0.136;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.218;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node3" target="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="122" y="100" as="sourcePoint" />
+            <mxPoint x="220" y="128" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="83" />
+              <mxPoint x="130" y="152" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-5" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;1:n&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="d5_IVzS--7n-4lWaoAS6-4">
+          <mxGeometry x="-0.5142" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-6" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.004;exitY=0.151;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node0" target="node1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="-160" as="sourcePoint" />
+            <mxPoint x="841" y="-91" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="-237" />
+              <mxPoint x="660" y="132" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-7" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;1:n&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="d5_IVzS--7n-4lWaoAS6-6">
+          <mxGeometry x="-0.5142" y="3" relative="1" as="geometry">
+            <mxPoint y="195" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-8" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.012;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;exitX=-0.006;exitY=0.142;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="node4" target="node3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-470" y="290" as="sourcePoint" />
+            <mxPoint x="-420" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-380" y="500" />
+              <mxPoint x="-380" y="88" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d5_IVzS--7n-4lWaoAS6-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;1:n&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="d5_IVzS--7n-4lWaoAS6-8">
+          <mxGeometry x="-0.157" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
